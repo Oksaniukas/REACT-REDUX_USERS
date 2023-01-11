@@ -21,6 +21,7 @@ const usersDefaultState = {
 };
 
 const DELETE_USER = "DELETE_USER";
+const ADD_USER = "ADD_USER";
 
 const usersReducer = (state = usersDefaultState, action) => {
    switch (action.type) {
@@ -29,12 +30,18 @@ const usersReducer = (state = usersDefaultState, action) => {
          return {...state, currentUsers: state.currentUsers.filter(user => {
             return user.id !== action.payload
          })}
+      case ADD_USER:
+         return {...state, currentUsers: action.payload}
 
       default: return state
    }
 }
 
 export const store = createStore(usersReducer);
+
+export const addUserActionCreater = (payload) => {
+   return {type: ADD_USER, payload}
+}
 
 export const deleteUserActionCreater = (payload) => {
    return { type: DELETE_USER, payload}

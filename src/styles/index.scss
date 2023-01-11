@@ -90,6 +90,23 @@ color: blue;
   margin-bottom: 20px;
 }
 
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-user {
+text-align: center;
+padding: 20px 0 0 0 ;
+margin-bottom: 20px;}
+
+.input-item {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
 footer {
   padding: 20px 0;
 }
