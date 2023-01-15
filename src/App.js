@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/login" element={<LoginLayout />}></Route>
+        <Route path="/login" element={<LoginLayout />} />
         
         <Route path="/" element={ <MainLayout />}>
           <Route index element={<UserList />}/>

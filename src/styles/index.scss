@@ -88,6 +88,11 @@ color: blue;
 
 .user {
   margin-bottom: 20px;
+  cursor: pointer;
+
+  &:hover{
+    color: darkred;
+  }
 }
 
 form{
