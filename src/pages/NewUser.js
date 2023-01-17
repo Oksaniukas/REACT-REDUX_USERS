@@ -9,6 +9,7 @@ function NewUser() {
    const dispatch = useDispatch();
    // const users = useSelector((state) => state.currentUsers);
    const chosenUser = useSelector((state) => state.selectedUser);
+   const allUsersAmount = useSelector((state) => state.currentUsers).length;
 
    const [selectedUser, setSelectedUser] = useState(chosenUser);
    
@@ -32,7 +33,7 @@ function NewUser() {
    }
 
    function addUser() {
-      dispatch(addUserActionCreater(selectedUser))
+      dispatch(addUserActionCreater({...selectedUser, id: allUsersAmount + 1}))
       navigate('/')
       
    }
